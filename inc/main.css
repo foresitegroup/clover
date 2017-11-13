@@ -1,0 +1,387 @@
+/*
+font-family: 'Dosis', sans-serif; [700,800]
+font-family: 'Open Sans', sans-serif; [600,700]
+
+#393939 - black
+#D7F9D4 - mint
+#55765A - light green
+#28422F - green
+*/
+
+BODY {
+  margin: 0;
+  padding: 0;
+  background: #D7F9D4;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-family: 'Dosis', sans-serif;
+}
+
+IMG {
+  border: 0;
+}
+
+A:link, A:visited {
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+A:hover, A:active {
+  text-decoration: none;
+}
+
+.site-width {
+  width: 1102px;
+  margin: 0 auto;
+}
+
+.site-width:after,
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#banner {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background: url(../images/banner.jpg) top center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#banner:before {
+  content: "";
+  display: block;
+  padding-top: 61.37%;
+}
+
+#banner:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #D7F9D4;
+  width: 100%;
+  height: 200px;
+  -webkit-transform: skewY(-5deg) translateY(60%);
+  -ms-transform: skewY(-5deg) translateY(60%);
+  transform: skewY(-5deg) translateY(60%);
+}
+
+#header {
+  background: linear-gradient(to bottom, #FFFFFF, transparent);
+  position: relative;
+  z-index: 2;
+}
+
+#header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, #FFFFFF 35%, transparent);
+}
+
+#header .site-width { position: relative; z-index: 5; }
+
+#logo {
+  margin-top: 20px;
+  width: 33.84%;
+  height: auto;
+}
+
+#header .site-width > DIV {
+  margin-top: 40px;
+  float: right;
+  text-align: center;
+  font-size: 31px;
+  /*font-size: 1.9vw;*/
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  color: #28422F;
+}
+
+#header A:link,
+#header A:visited {
+  display: block;
+  margin-top: 0.3em;
+  border: 5px solid #28422F;
+  border-radius: 20px;
+  padding: 0.3em 1.4em 0.3em 1.5em;
+  color: #28422F;
+  font-size: 24px;
+  /*font-size: 1.5vw;*/
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+#header A:hover,
+#header A:active {
+  background: #28422F;
+  color: #FFFFFF;
+}
+
+#header-content {
+  margin: 7% auto 3.5%;
+  position: relative;
+  z-index: 2;
+  width: 28.75%;
+  text-align: center;
+}
+
+#header-content:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#header-content:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 50%;
+  background: rgba(40,66,47,0.8);
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+
+#header-content > DIV {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+#header-content IMG {
+  width: 14%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#header-content H2,
+#header-content H3 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 2.9vw;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#header-content H2 {
+  margin-top: 0.1em;
+  font-size: 3.4vw;
+}
+
+#content {
+  position: relative;
+  z-index: 3;
+  width: 65%;
+  /*overflow: hidden;*/
+}
+
+#content:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#content:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 50% 0;
+  background: #FFFFFF;
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+
+#content > DIV {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 60%;
+  color: #393939;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6vw;
+  line-height: 1.8em;
+}
+
+#content H1 {
+  margin: 0 0 0.2em;
+  color: #28422F;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  font-size: 396%;
+  line-height: 0.9em;
+  text-transform: uppercase;
+}
+
+#content #leaf-top {
+  position: absolute;
+  top: 20%;
+  left: 102%;
+  width: 33%;
+  height: 33%;
+  border-radius: 50% 50% 50% 0;
+  border: 60px solid #55765A;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+#content #leaf-bottom {
+  position: absolute;
+  top: 103%;
+  left: 46%;
+  width: 33%;
+  height: 33%;
+  border-radius: 50% 0 50% 50%;
+  border: 60px solid #55765A;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-16deg);
+  -ms-transform: rotate(-16deg);
+  transform: rotate(-16deg);
+}
+
+#products {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  transform: translateY(-60%);
+  width: 50%;
+  overflow: hidden;
+}
+
+#products:before {
+  content: "";
+  display: block;
+  padding-top: 93%;
+}
+
+#products:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 93%;
+  height: 100%;
+  border-radius: 50% 50% 0 50%;
+  background: #28422F;
+  -webkit-transform: rotate(-18deg);
+  -ms-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+
+#products > DIV {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%,-50%);
+  width: 55%;
+  font-size: 4.5vw;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#products > DIV A:link,
+#products > DIV A:visited {
+  display: inline-block;
+  margin-top: 1em;
+  border: 10px solid #FFFFFF;
+  border-radius: 20px;
+  padding: 0.5em 1.4em 0.5em 1.5em;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.9vw;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+}
+
+#products > DIV A:hover,
+#products > DIV A:active {
+  background: #FFFFFF;
+  color: #28422F;
+}
+
+#spices {
+  margin-top: 14%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 3;
+}
+
+#suppliers {
+  background: #28422F;
+  padding: 3em 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+}
+
+#suppliers .supplier {
+  display: inline-block;
+  margin: 0 2.5%;
+  width: 19%;
+  background-color: #28422F;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#suppliers .supplier:before {
+  content: "";
+  display: block;
+  padding-top: 64.37%;
+}
+
+
+
+
+@media only screen and (max-width: 1102px) {
+  .site-width {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Small computer or landscape tablet */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Tablet */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Small tablet */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Phone */
+}
