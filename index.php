@@ -1,3 +1,11 @@
+<?php
+function email($address, $name="") {
+  $email = "";
+  for ($i = 0; $i < strlen($address); $i++) { $email .= (rand(0, 1) == 0) ? "&#" . ord(substr($address, $i)) . ";" : substr($address, $i, 1); }
+  if ($name == "") $name = $email;
+  echo "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;$email\">$name</a>";
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,8 +40,8 @@
         <img src="images/logo.png" alt="Clover Distribution" id="logo">
 
         <div>
-          414.482.3636
-          <a href="pdf/Clover_Distribution_Product_List.pdf">Product List</a>
+          <a href="tel:4144823636" class="phone"></a>
+          <a href="pdf/Clover_Distribution_Product_List.pdf" class="button">Product List</a>
         </div>
       </div>
     </div>
@@ -47,39 +55,102 @@
       </div>
     </div>
 
-    <div id="content">
-      <div>
-        <h1>Working with you &amp; for you.</h1>
+    <div id="content-wrap">
+      <div id="content">
+        <div>
+          <h1>Working with you &amp; for you.</h1>
 
-        Clover Distribution, Inc. is a locally-owned, locally-run specialty food distributor that works with you and for you, providing excellent quality and service. Our spices are milled, packaged and distributed in small batches throughout Wisconsin, providing freshness and quality while remaining "truly local".<br>
-        <br>
+          Clover Distribution, Inc. is a locally-owned, locally-run specialty food distributor that works with you and for you, providing excellent quality and service. Our spices are milled, packaged and distributed in small batches throughout Wisconsin, providing freshness and quality while remaining "truly local".<br>
+          <br>
 
-        Let us put our 30 years of experience to work for you. Give us a call for all of your food service needs.
+          Let us put our 30 years of experience to work for you. Give us a call for all of your food service needs.
+        </div>
       </div>
 
       <div id="leaf-top"></div>
       <div id="leaf-bottom"></div>
-    </div>
 
-    <div id="products">
-      <div>
-        See our<br>full line<br>of products
+      <div id="products">
+        <div>
+          See our<br>full line<br>of products
 
-        <a href="pdf/Clover_Distribution_Product_List.pdf">Get Product List</a>
+          <a href="pdf/Clover_Distribution_Product_List.pdf">Get Product List</a>
+        </div>
       </div>
     </div>
 
-    <img src="images/spices.png" alt="" id="spices">
+    <div id="spices"></div>
 
     <div id="suppliers">
       <div class="site-width">
         Our Key Suppliers<br>
-        <br>
 
         <div class="supplier" style="background-image: url(images/supplier-bobs.jpg);"></div>
         <div class="supplier" style="background-image: url(images/supplier-guittard.jpg);"></div>
         <div class="supplier" style="background-image: url(images/supplier-conway.jpg);"></div>
         <div class="supplier" style="background-image: url(images/supplier-roland.jpg);"></div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <div class="site-width">
+        <div class="title">
+          <div>Get In Touch</div>
+        </div>
+
+        <div class="person gary">
+          Gary Schlapinski
+
+          <table>
+            <tr>
+              <td>Email</td>
+              <td><?php email("gschlapinski@gmail.com"); ?></td>
+            </tr>
+            <tr>
+              <td>Office</td>
+              <td>414-482-3636</td>
+            </tr>
+            <tr>
+              <td>Fax</td>
+              <td>414-482-3644</td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+              <td>414-659-6960</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="person jeff">
+          Jeff Acerbi
+
+          <table>
+            <tr>
+              <td>Email</td>
+              <td><?php email("jaacerbi@yahoo.com"); ?></td>
+            </tr>
+            <tr>
+              <td>Office</td>
+              <td>414-482-3636</td>
+            </tr>
+            <tr>
+              <td>Fax</td>
+              <td>414-482-3644</td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+              <td>414-305-9412</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      Clover Distribution, Inc. 2018 S 1st Street Milwaukee, WI 53207
+
+      <div>
+        &copy; <?php echo date("Y"); ?> Clover Distribution, Inc. All Rights Reserved.
       </div>
     </div>
   </body>

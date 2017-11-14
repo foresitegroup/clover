@@ -88,38 +88,42 @@ A:hover, A:active {
 #header .site-width { position: relative; z-index: 5; }
 
 #logo {
-  margin-top: 20px;
+  margin-top: 1.25em;
   width: 33.84%;
   height: auto;
 }
 
 #header .site-width > DIV {
-  margin-top: 40px;
+  margin-top: 1.3em;
   float: right;
   text-align: center;
   font-size: 31px;
-  /*font-size: 1.9vw;*/
   line-height: 1em;
   letter-spacing: 0.1em;
   color: #28422F;
 }
 
-#header A:link,
-#header A:visited {
+#header A { color: #28422F; }
+
+#header A.phone:before {
+  content: "414.482.3636";
+}
+
+#header A.button:link,
+#header A.button:visited {
   display: block;
   margin-top: 0.3em;
   border: 5px solid #28422F;
   border-radius: 20px;
   padding: 0.3em 1.4em 0.3em 1.5em;
   color: #28422F;
-  font-size: 24px;
-  /*font-size: 1.5vw;*/
+  font-size: 77.41%;
   line-height: 1em;
   text-transform: uppercase;
 }
 
-#header A:hover,
-#header A:active {
+#header A.button:hover,
+#header A.button:active {
   background: #28422F;
   color: #FFFFFF;
 }
@@ -182,11 +186,12 @@ A:hover, A:active {
   font-size: 3.4vw;
 }
 
+#content-wrap { position: relative; }
+
 #content {
   position: relative;
   z-index: 3;
   width: 65%;
-  /*overflow: hidden;*/
 }
 
 #content:before {
@@ -235,12 +240,12 @@ A:hover, A:active {
   text-transform: uppercase;
 }
 
-#content #leaf-top {
+#content-wrap #leaf-top {
   position: absolute;
-  top: 20%;
-  left: 102%;
-  width: 33%;
-  height: 33%;
+  z-index: 10;
+  bottom: 47%;
+  left: 66%;
+  width: 21.87%;
   border-radius: 50% 50% 50% 0;
   border: 60px solid #55765A;
   box-sizing: border-box;
@@ -249,25 +254,31 @@ A:hover, A:active {
   transform: rotate(-6deg);
 }
 
-#content #leaf-bottom {
+#content-wrap #leaf-bottom {
   position: absolute;
-  top: 103%;
-  left: 46%;
-  width: 33%;
-  height: 33%;
+  top: 102%;
+  left: 31%;
+  width: 19.87%;
   border-radius: 50% 0 50% 50%;
-  border: 60px solid #55765A;
+  border: 50px solid #55765A;
   box-sizing: border-box;
   -webkit-transform: rotate(-16deg);
   -ms-transform: rotate(-16deg);
   transform: rotate(-16deg);
 }
 
+#content-wrap #leaf-top:before,
+#content-wrap #leaf-bottom:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
 #products {
   position: absolute;
+  top: 57%;
   right: 0;
   z-index: 2;
-  transform: translateY(-60%);
   width: 50%;
   overflow: hidden;
 }
@@ -297,6 +308,8 @@ A:hover, A:active {
   position: absolute;
   top: 50%;
   left: 42%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   width: 55%;
   font-size: 4.5vw;
@@ -311,10 +324,10 @@ A:hover, A:active {
   margin-top: 1em;
   border: 10px solid #FFFFFF;
   border-radius: 20px;
-  padding: 0.5em 1.4em 0.5em 1.5em;
+  padding: 0.7em 1.4em 0.7em 1.5em;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 1.9vw;
+  font-size: 41.66%;
   line-height: 1em;
   letter-spacing: 0.1em;
 }
@@ -327,16 +340,21 @@ A:hover, A:active {
 
 #spices {
   margin-top: 14%;
-  display: block;
-  max-width: 100%;
-  height: auto;
   position: relative;
   z-index: 3;
+  background: url(../images/spices.png) bottom center no-repeat;
+  background-size: cover;
+}
+
+#spices:before {
+  content: "";
+  display: block;
+  padding-top: 53.37%;
 }
 
 #suppliers {
   background: #28422F;
-  padding: 3em 0;
+  padding: 2em 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
@@ -346,7 +364,7 @@ A:hover, A:active {
 
 #suppliers .supplier {
   display: inline-block;
-  margin: 0 2.5%;
+  margin: 1.5em 2.5% 0;
   width: 19%;
   background-color: #28422F;
   background-blend-mode: multiply;
@@ -361,21 +379,234 @@ A:hover, A:active {
   padding-top: 64.37%;
 }
 
+#contact {
+  padding: 4em 0;
+  background: #FFFFFF;
+  color: #28422F;
+}
+
+#contact .title {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 23.59%;
+}
+
+#contact .title:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#contact .title:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50% 50% 50% 0;
+  border: 49px solid #D7F9D4;
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+#contact .title > DIV {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 72px;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#contact .person {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+  margin-left: 4%;
+  font-size: 36px;
+}
+
+#contact .person.jeff { width: 32%; }
+
+#contact .person TD { font-size: 66.66%; }
+
+#contact .person TD:nth-child(1) {
+  padding-right: 1em;
+}
+
+#contact .person TD:nth-child(2) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#contact .person A:link,
+#contact .person A:visited { color: #28422F; }
+
+#contact .person A:hover,
+#contact .person A:active { background: #D7F9D4; }
+
+#footer {
+  padding: 5em 0;
+  background: #28422F;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1em;
+  text-align: center;
+}
+
+#footer > DIV {
+  margin-top: 1.25em;
+  color: rgba(255,255,255,0.43);
+}
 
 
 
 @media only screen and (max-width: 1102px) {
-  .site-width {
-    width: 96%;
+  .site-width { width: 96%; }
+
+  #header .site-width > DIV { font-size: 2.8vw; }
+
+  #header-content {
+    margin: 3% auto;
+    width: 30%;
   }
+
+  #header-content IMG { width: 20%; }
+  #header-content H3 { font-size: 3.4vw; }
+  #header-content H2 { font-size: 3.9vw; }
+
+  #content {
+    width: 75%;
+    left: -10%;
+  }
+
+  #content > DIV {
+    width: 70%;
+    font-size: 1.9vw;
+  }
+
+  #content-wrap #leaf-bottom { left: 27%; }
+
+  #products {
+    width: 55%;
+  }
+
+  #products > DIV {
+    left: 48%;
+    font-size: 5vw;
+  }
+  
+  #contact .title > DIV { font-size: 6.55vw; }
+  #contact .person { font-size: 3.26vw; }
 }
 
-@media only screen and (max-width: 800px) {
-  /* Small computer or landscape tablet */
+@media only screen and (max-width: 900px) {
+  #suppliers .supplier { margin: 1.5em 2.4% 0; }
 }
 
-@media only screen and (max-width: 768px) {
-  /* Tablet */
+@media only screen and (max-width: 750px) {
+  BODY { background-color: #55765A; }
+
+  .site-width { width: 82%; }
+  
+  #banner { background-position: top left; }
+  #banner:before { padding-top: 128%; }
+
+  #banner:after {
+    background: #FFFFFF;
+    -webkit-transform: skewY(7deg) translateY(40%);
+    -ms-transform: skewY(7deg) translateY(40%);
+    transform: skewY(7deg) translateY(40%);
+  }
+
+  #header:after { height: 300%; }
+
+  #logo { width: 46%; }
+
+  #header A { float: right; }
+
+  #header A.button:link,
+  #header A.button:visited {
+    margin: 0 1em 0 0;
+    font-size: 3.2vw;
+    line-height: 1.2em;
+    box-sizing: border-box;
+    width: 20vw;
+    padding: 0.3em 0;
+  }
+
+  #header A.phone:before {
+    display: block;
+    font-family: "FontAwesome";
+    content: "\f095";
+    font-size: 8vw;
+    line-height: 1em;
+    border: 5px solid #28422F;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0.086em 0.176em;
+  }
+
+  #header A.phone:hover:before {
+    background: #28422F;
+    color: #FFFFFF;
+  }
+
+  #header-content { margin: 17% auto 30%; width: 60%; }
+
+  #header-content IMG { width: 13.6%; }
+  #header-content H3 { font-size: 6.2vw; }
+  #header-content H2 { font-size: 7.23vw; }
+
+  #content { width: 100%; left: 0; background: #FFFFFF; }
+  #content:before { display: none; }
+  #content:after {
+    border-radius: 0;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    background: #FFFFFF;
+    width: 100%;
+    height: 200px;
+    -webkit-transform: skewY(-7deg) translateY(40%);
+    -ms-transform: skewY(-7deg) translateY(40%);
+    transform: skewY(-7deg) translateY(40%);
+  }
+
+  #content > DIV,
+  #products > DIV {
+    position: static;
+    width: 82%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    font-size: 3.8vw;
+    margin: 0 auto;
+  }
+
+  #content-wrap #leaf-top, #content-wrap #leaf-bottom { display: none; }
+
+  #products { position: static; width: 100%; margin-top: 10em; }
+  #products:before, #products:after { display: none; }
+
+  #products > DIV { font-size: 13.7vw; }
+
+  #products > DIV A:link, #products > DIV A:visited { font-size: 29.19%; }
+
+  #spices { margin-top: 10%; background-size: 143% auto; }
+  #spices:before { padding-top: 76%; }
 }
 
 @media only screen and (max-width: 600px) {
