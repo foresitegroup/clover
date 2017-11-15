@@ -17,18 +17,40 @@ function email($address, $name="") {
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Clover Distribution, Inc. is a locally-owned, locally-run specialty food distributor. Truly fresh, truly local.">
+    <meta name="keywords" content="Spices, wholesale spices, clover spices, food distributors, wholesale chocolate, wholesale food distributors, food service, chef supplies, commercial food service, wholesale groceries, bulk foods wholesale, wholesale snacks, wholesale food distributors wisconsin, fresh spices, bob’s red mill, guittard chocolate, conway dressing, roland specialty foods">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Dosis:700,800|Open+Sans:600,700" rel="stylesheet">
     <link rel="stylesheet" href="inc/main.css?<?php echo filemtime('inc/main.css'); ?>">
 
     <script type="text/javascript" src="inc/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="inc/slick.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+        
+        $('#supplier-wrap').slick({
+          mobileFirst: true,
+          autoplay: true,
+          appendArrows: $('#supplier-wrap'),
+          prevArrow: '<a href="#" class="slick-prev"><i class="fa fa-chevron-left"></i></a>',
+          nextArrow: '<a href="#" class="slick-next"><i class="fa fa-chevron-right"></i></a>',
+          responsive: [{ breakpoint: 750, settings: "unslick" }]
+        });
+
+        $(window).on('resize', function() { $('#supplier-wrap').slick('resize'); });
       });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109674611-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109674611-1');
     </script>
   </head>
   <body>
@@ -83,12 +105,14 @@ function email($address, $name="") {
 
     <div id="suppliers">
       <div class="site-width">
-        Our Key Suppliers<br>
-
-        <div class="supplier" style="background-image: url(images/supplier-bobs.jpg);"></div>
-        <div class="supplier" style="background-image: url(images/supplier-guittard.jpg);"></div>
-        <div class="supplier" style="background-image: url(images/supplier-conway.jpg);"></div>
-        <div class="supplier" style="background-image: url(images/supplier-roland.jpg);"></div>
+        Our Key Suppliers
+        
+        <div id="supplier-wrap">
+          <div class="supplier" style="background-image: url(images/supplier-bobs.jpg);"></div>
+          <div class="supplier" style="background-image: url(images/supplier-guittard.jpg);"></div>
+          <div class="supplier" style="background-image: url(images/supplier-conway.jpg);"></div>
+          <div class="supplier" style="background-image: url(images/supplier-roland.jpg);"></div>
+        </div>
       </div>
     </div>
 
@@ -147,7 +171,7 @@ function email($address, $name="") {
     </div>
 
     <div id="footer">
-      Clover Distribution, Inc. 2018 S 1st Street Milwaukee, WI 53207
+      Clover Distribution, Inc.<span> </span>2018 S 1st Street Milwaukee, WI 53207
 
       <div>
         &copy; <?php echo date("Y"); ?> Clover Distribution, Inc. All Rights Reserved.
