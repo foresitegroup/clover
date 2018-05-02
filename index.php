@@ -112,6 +112,7 @@ function email($address, $name="") {
           <div class="supplier" style="background-image: url(images/supplier-guittard.jpg);"></div>
           <div class="supplier" style="background-image: url(images/supplier-conway.jpg);"></div>
           <div class="supplier" style="background-image: url(images/supplier-roland.jpg);"></div>
+          <div class="supplier" style="background-image: url(images/supplier-karlsburger.jpg);"></div>
         </div>
       </div>
     </div>
