@@ -389,7 +389,7 @@ A:hover, A:active {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  width: 23.59%;
+  width: 23%;
 }
 
 #contact .title:before {
@@ -430,18 +430,16 @@ A:hover, A:active {
 #contact .person {
   display: inline-block;
   vertical-align: middle;
-  width: 35%;
-  margin-left: 4%;
+  width: 33%;
+  margin-left: 5%;
   font-size: 36px;
 }
 
-#contact .person.jeff { width: 32%; }
-
 #contact .person TD { font-size: 66.66%; }
 
-#contact .person TD:nth-child(1) {
-  padding-right: 1em;
-}
+#contact .person TD:nth-child(1) { padding-right: 1em; }
+
+#contact .person TD.email { font-size: 50%; padding-right: 0; }
 
 #contact .person TD:nth-child(2) {
   font-family: 'Open Sans', sans-serif;
@@ -542,7 +540,7 @@ A:hover, A:active {
 
 
 
-@media only screen and (max-width: 1102px) {
+@media only screen and (max-width: 1120px) {
   .site-width { width: 96%; }
 
   #header .site-width > DIV { font-size: 2.8vw; }
@@ -719,17 +717,9 @@ A:hover, A:active {
     font-size: 7.6vw;
   }
 
-  #contact .person.jeff { width: 100%; }
+  #contact .person TD.email { font-size: 4.5vw; }
 
   #footer { font-size: 4.2vw; line-height: 1.2em; }
   #footer > DIV { font-size: 3.2vw; }
   #footer SPAN { display: block; }
-}
-
-@media only screen and (max-width: 600px) {
-  /* Small tablet */
-}
-
-@media only screen and (max-width: 480px) {
-  /* Phone */
 }

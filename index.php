@@ -123,13 +123,12 @@ function email($address, $name="") {
           <div>Get In Touch</div>
         </div>
 
-        <div class="person gary">
-          Gary Schlapinski
+        <div class="person">
+          Andrew Fisher
 
           <table>
             <tr>
-              <td>Email</td>
-              <td><?php email("gschlapinski@gmail.com"); ?></td>
+              <td colspan="2" class="email"><?php email("andrewfisher@cloverdistribution.com"); ?></td>
             </tr>
             <tr>
               <td>Office</td>
@@ -141,18 +140,17 @@ function email($address, $name="") {
             </tr>
             <tr>
               <td>Cell</td>
-              <td>414-659-6960</td>
+              <td>414-418-7782</td>
             </tr>
           </table>
         </div>
 
-        <div class="person jeff">
-          Jeff Acerbi
+        <div class="person">
+          Stephanie Fisher
 
           <table>
             <tr>
-              <td>Email</td>
-              <td><?php email("jaacerbi@yahoo.com"); ?></td>
+              <td colspan="2" class="email"><?php email("stephaniefisher@cloverdistribution.com"); ?></td>
             </tr>
             <tr>
               <td>Office</td>
@@ -164,7 +162,7 @@ function email($address, $name="") {
             </tr>
             <tr>
               <td>Cell</td>
-              <td>414-305-9412</td>
+              <td>262-510-9217</td>
             </tr>
           </table>
         </div>
@@ -175,7 +173,7 @@ function email($address, $name="") {
       Clover Distribution, Inc.<span> </span>2018 S 1st Street Milwaukee, WI 53207
 
       <div>
-        &copy; <?php echo date("Y"); ?> Clover Distribution, Inc. All Rights Reserved.
+        &copy; <?php echo date("Y"); ?> Fisher & Bloom LLC. All Rights Reserved.
       </div>
     </div>
   </body>
