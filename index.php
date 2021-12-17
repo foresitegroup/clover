@@ -28,7 +28,8 @@ function email($address, $name="") {
     <script type="text/javascript" src="inc/slick.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+        $("a[href^='http']").not("[href*='" + window.location.host + "']").prop('target','new');
+        $("a[href*='.pdf']").prop('target', 'new');
         
         $('#supplier-wrap').slick({
           mobileFirst: true,
@@ -63,7 +64,7 @@ function email($address, $name="") {
 
         <div>
           <a href="tel:4144823636" class="phone"></a>
-          <a href="pdf/Clover_Distribution_Product_List.pdf" class="button">Product List</a>
+          <a href="pdf/Clover_Distribution_Product_List.pdf?<?php echo filemtime('pdf/Clover_Distribution_Product_List.pdf'); ?>" class="button">Product List</a>
         </div>
       </div>
     </div>
@@ -96,7 +97,7 @@ function email($address, $name="") {
         <div>
           See our<br>full line<br>of products
 
-          <a href="pdf/Clover_Distribution_Product_List.pdf">Get Product List</a>
+          <a href="pdf/Clover_Distribution_Product_List.pdf?<?php echo filemtime('pdf/Clover_Distribution_Product_List.pdf'); ?>">Get Product List</a>
         </div>
       </div>
     </div>
